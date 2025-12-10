@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script src="frontend.js"></script>
+
+    <title>admin/dg</title>
+</head>
+<body>
+    <!-- navbar -->
+   <header class=" primary-navigation flex">
+    <div>
+        <a href="index.html" class="home">
+        <img src="assests/dg logo hom.jpg" alt="logo"  width="50em" class="logo">
+        </a>
+    </div>
+   <nav>
+    <ul class="primary-navigation">
+        <li>
+            <a href="index.html" class="btn1">HOME</a>
+        </li> 
+        <li>
+            <a href="login.html" class="btn1">LOGIN</a>
+        </li> 
+    </ul>
+    </nav> 
+   </header>
+    <!-----------------------TYPEWRITER------------------------- -->
+    
+    <div class="typerwriter">
+        <h1 class="typer1">
+            DG Accomodation Navigating Towards:
+        </h1>
+        <p class="typer2">
+            AFFORDABLITY,COMFORTABLE LIVING,SECURE STAY
+        </p>
+    </div>
+
+
+<!-- /* =============== Make Payments Button=============== */ -->
+    
+<section class="main-card">
+    <!-- Make Payments Button -->
+<section class="cards1">
+    <!-- Make Payments Button -->
+    <div class="daraja" id="darajaPayments">
+ <button class=" daraja" id="daraja" onclick="showPaymentPopup()">
+    <h2>Make Payments</h2>
+ </button> 
+    <button class=" daraja" id="register" onclick="showPaymentPopup()">
+   <a href="#"><h2>Register</h2></a>
+ </button> 
+
+    <!-- Get Receipt Button -->        
+        <button class="daraja"  id="daraja" onclick="paymentReciept()">
+        <h2>Get your Receipt</h2>
+        </button>
+    </div>
+
+<!-- POPUP WRAPPER -->
+ <div class="payment-popup" id="paymentPopup">
+    <div class="popup-overlay"></div>
+    <section class="popup-content">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closePaymentPopup()">&times;</button>
+
+        <div class="payment-card">
+            <div class="tabs">
+                <button class="tab-btn active">MPESA</button>
+            </div>
+
+            <div class="header">
+                <div class="logo">M-P<span>ESA</span></div>
+            </div>
+
+            <div class="header-text">LIPA NA MPESA</div>
+
+            <form id="mpesaForm">   
+                <div class="form-group">
+                    <label for="amount">Amount
+                        <input type="number" id="amount" placeholder="Enter Amount" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone
+                        <input type="text" id="phone" placeholder="Enter phone number" required>
+                    </label>
+                </div>
+
+                <button type="button" class="Pay-btn" onclick="capturePayment()">PAY</button>
+            </form>
+        </div>
+    </section>
+  </div>
+     
+ </section>  
+    <!-- ------- DG RULES--------- -->
+<section class="cards">
+     <div class="card2">
+        <h3>DG ABODES RULES </h3>
+        <ol>
+            <li>1.	Maintain quiet hours from 10:00 PM to 6:00 AM.</li>
+            <li>2.	Respect fellow residents and avoid any form of harassment or bullying.</li>
+            <li>3.	Visitors MUST be registered at the gate; no overnight visitors unless approved.</li>
+            <li>4.	Keep your room clean and tidy at all times.</li>
+            <li>5.	Shared areas (bathrooms, corridors, kitchen ) must be kept clean after use.</li>
+            <li>6.	No illegal substances, weapons, or dangerous items allowed in the hostel.</li>
+            <li>7.	Report any damages or maintenance issues immediately.</li>
+            <li>8.	Do not tamper with electrical installations or hostel property.</li>
+            <li>9.	Alcohol and smoking restricted within the hotel.</li>
+            <li>10.	Always lock your room and keep your belongings safe.</li>
+            <li>11.	Respect gender-restricted zones </li>
+            <li>12.	Follow security protocols :  sign in & out </li>
+            <li><mark>13.	Failure to follow rules may lead to warnings, fines, or eviction.</mark></li>
+        </ol>
+     </div>
+
+    <div class="card3">
+        <h3>FREQUENTLY ASKED (FAQ)</h3>
+        <h4>
+            Is water available
+            <p>
+                The apartment has  adequent water supply throughout from the water supply in Homabay town, this is ensured by the strong partnership with the suppliers ensuring consistent and dependable sevices, the apartment also has a backup of water incase of shortage from the suppliers, wich has has enhanced comfortable life in the  apartment
+            </p>
+        </h4>
+        <h4>
+            Is electricity available
+            <p>
+                The area experience  rear shortage of ,power making the apartment even more reliable for staying due to maxmum security
+            </p>
+        </h4>
+         <h4>
+            How is the security
+            <p>
+                The apartment is under 24/7 CCTV surveillance and has security guards ensuring maximum security for the tenants
+            </p>
+         </h4>
+    </div>
+    </section>
+</section>
+     <footer>
+    
+    <h1>Want to reach Us:</h1><br>
+    <a href="paulohaile39@gmail.com">
+    Email:paulohaile39@gmail.com</a><br>
+    <a href="+254 769679431">
+    Phone:+254 769679431</a><br>
+    <a href="+254 782142162">
+    Phone:+254 782142162</a><br>
+    <p>
+        &copy; 2024 DG Accomodation. All rights reserved.
+    </p>
+     </footer>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

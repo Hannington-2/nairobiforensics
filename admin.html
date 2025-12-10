@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style></style>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <h2 class="logo">Admin Dashboard</h2>
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li>Users</li>
+            <li>Reports</li>
+            <li>Analytics</li>
+            <li>Messages</li>
+            <li>Settings</li>
+            <li>Logout</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- TOP NAVIGATION -->
+        <div class="topbar">
+            <span class="menu-btn" onclick="toggleSidebar()">☰</span>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+            </div>
+
+            <div class="top-icons">
+                <span class="notif">🔔</span>
+                <img src="https://via.placeholder.com/40" class="profile-pic" />
+            </div>
+        </div>
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="content">
+
+            <!-- CARDS -->
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>1,240</p>
+                </div>
+                <div class="card">
+                    <h3>Sales</h3>
+                    <p>$12,400</p>
+                </div>
+                <div class="card">
+                    <h3>New Orders</h3>
+                    <p>352</p>
+                </div>
+                <div class="card">
+                    <h3>Pending</h3>
+                    <p>77</p>
+                </div>
+            </div>
+
+            <!-- CHARTS -->
+            <div class="charts">
+                <div class="chart">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- TABLE -->
+            <div class="table-section">
+                <h2>Recent Activities</h2>
+                <table>
+                    <tr>
+                        <th>User</th>
+                        <th>Activity</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Logged in</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>Alice</td>
+                        <td>Updated Profile</td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td>Michael</td>
+                        <td>Added a new user</td>
+                        <td>3 days ago</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+
+/* LINE CHART */
+new Chart(document.getElementById("lineChart"), {
+    type: "line",
+    data: {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        datasets: [{
+            label: "Visitors",
+            data: [120, 190, 300, 250, 220, 300],
+            borderWidth: 2,
+            borderColor: "#2d6cdf",
+            fill: false,
+            tension: 0.3
+        }]
+    }
+});
+
+/* BAR CHART */
+new Chart(document.getElementById("barChart"), {
+    type: "bar",
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+        datasets: [{
+            label: "Sales",
+            data: [50, 70, 90, 110, 80],
+            backgroundColor: "#3b82f6"
+        }]
+    }
+});
+
+/* PIE CHART */
+new Chart(document.getElementById("pieChart"), {
+    type: "pie",
+    data: {
+        labels: ["Chrome", "Firefox", "Safari"],
+        datasets: [{
+            label: "Users",
+            data: [60, 25, 15],
+            backgroundColor: ["#2d6cdf", "#60a5fa", "#a5b4fc"]
+        }]
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+/* =============== GOOGLE FONT =============== */
+@import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap');
+
+/* =============== ROOT FONT-SIZE =============== */
+html{
+    font-size: 62.5%;
+
+}
+/* =============== ROOT VARIABLES =============== */
+:root{
+ ---typewriterspeed: 6s;
+ ---bg-color:linear-gradient(135deg, rgba(14,165,233,0.5), rgba(99,102,241,0.5)),;
+ ---typewritercharacter: 32;
+ /* type writer */
+ ---tp-color: #0f172a;
+ ---tp-cards: #111827;
+ ---tp-text: e5e7eb;
+ ---tp-accent:#ef4444;
+ ---tp-caret:#ffffff; 
+ 
+ /* =============== fonts=============== */
+---font-family: 'Oregano', cursive;
+---font-color:hsl(0 0% 0%/0.7)                  
+---font-size1: clamp(1.2rem, 3vw, 3rem);    
+---h1: clamp(2.2rem, 6vw, 4rem); 
+---h2: clamp(2rem, 5vw, 3.2rem); 
+---h3: clamp(1.7rem, 4.5vw, 2.8rem); 
+---h4: clamp(1.5rem, 4vw, 2.2rem); 
+---h5: clamp(1.3rem, 3.5vw, 1.8rem); 
+---h6: clamp(1.1rem, 3vw, 1.5rem); 
+---Normal-paragraph: clamp(1rem, 2.5vw, 1.2rem); 
+---Small-text: clamp(0.8rem, 2vw, 1rem);
+---Large-text: clamp(1.1rem, 3vw, 1.6rem);
+---Buttons: clamp(0.9rem, 2vw, 1.1rem);
+---Navigation-links: clamp(0.95rem, 2vw, 1.3rem);
+---Typewriter: clamp(1.4rem, 4vw, 2.6rem);
+
+ /* ===============paymentForm=============== */
+ ---py-boxshadow: 0 0.4rem 1.5rem rgba(0, 0, 0,0.05);
+ ---py-bg: white;
+ ---btn-active-bg: #128c46;
+ ---btn-color: #f9f9f9;
+ ---logo: #e43338;
+ ---label-color: #555;
+  ---f-color: #128c46;
+
+}
+
+/* =============== GLOBAL BODY STYLE =============== */
+body{
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif 'Oregano', cursive;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    color: var(---tp-cards);
+    background: 
+    linear-gradient(135deg, rgba(14,165,233,0.5), rgba(99,102,241,0.5)),
+    url('assests/backgroungimage.jpg');
+}
+img {
+  background: none;
+}
+
+
+/* =============== NAVIGATION =============== */ 
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-end: 2rem;
+     position: relative;
+
+}
+    header.primary-navigation .logo {
+    width: 50px;
+    height: auto;
+};
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(---f-color);
+    letter-spacing: -1px;
+}
+
+.primary-navigation ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* NAVBAR */
+header.primary-navigation{
+    background-color: var(---bg-color);
+    display: flex;
+    position: sticky;
+    top: 0;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    /* background-color: rgba(255,255,255,0.85); */
+    backdrop-filter: blur(10px);
+}
+
+ .primary-navigation li a:hover {
+    color: #0ea5e9;
+}
+
+li {
+    list-style: none;
+    font-size: 2rem;
+}
+/* =============== HERO + TYPEWRITER SECTION =============== */
+
+.typerwriter{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 5rem auto 3rem auto;
+    font-family: 'Oregano', cursive;
+    
+}
+ h1{
+    font-size: clamp(1em, 5vw, 3em);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    width: max-content;
+    margin: 0.75px 0 1px 0;
+    color: var(---tp-cards);
+}
+.typer2{
+    color: hsl(0 0% 0%/0.7);
+    font-family: inherit;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 3rem;
+    width: clamp(1rem, .5em); 
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(---typewriterspeed) + 2ms) forwards ;
+
+}
+.typer1::before,
+.typer1::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+       
+}
+.typer1::before{
+    background-color: var(---bg-color);
+    filter: blur(5px);
+    animation: typewriter var(---typewriterspeed) steps(30) 1s forwards;
+}
+.typer1::after{
+    width: 0.125em;
+    background: var(---bg-color);
+    animation: typewriter var(---typewriterspeed) steps(30) 1s forwards, blink 750ms steps(34) infinite;
+
+}
+
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+} */
+/* ------------------HERO-SECTION-------------------- */
+.main-card{
+    outline: solid 2px red;
+    display: flex;
+    
+    flex-direction: row;
+}
+
+/* ===============DARAJA 2.0 payment-card =============== */
+
+
+.body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    background: rgba(0,0,0,0.3);
+    display: none;   
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.payment-popup.show {
+    display: flex;
+}
+.pop-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+    }
+.payment-card{
+    background-color: var(---py-bg);
+    width: 320px;
+    max-width: clamp(400px, 300px, 450px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(---py-boxshadow);
+    text-align: left;
+
+}
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.tab-btn{
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2rem;
+    font-size: var(---h6);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tab-btn.active{
+    background-color: var(---btn-active-bg);
+    color: #f9f9f9;
+}
+.tab-btn.inactive{
+    background-color: var(#128c46);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+}
+
+.logo{
+    font-weight: 900;;
+    font-size: 2rem;
+    color: var(---f-color);
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+}
+.logo span{
+    color: #e43338;
+}
+.header-text{
+    font-size: var(---Normal-paragraph);
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+    text-align: right;
+
+}
+.form-group{
+    margin-bottom: 1.5rem;
+}
+ label{
+    display: block;
+    font-size: var(---Normal-paragraph);
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.8rem;
+ }
+
+input[type="text"]
+input[type="number"]{
+    width: 100%;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #e0e0e0;
+    font-size: var(---Large-text);
+    box-sizing: border-box;
+    background-color: #fcfcfc;
+}
+
+input:focus{
+    outline: none;
+    border-color: #0b6e36;
+    background-color: white;    
+}
+
+.pay-btn{
+    margin-top: 1rem;
+    background-color: var(---btn-active-bg);
+    color: white;
+    border: none;
+    padding: 2rem 2.5rem;
+    border-radius: 3.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.4rem;
+    width: auto;
+}
+ .Pay-btn:hover{
+    background-color: #09582b;
+ }
+
+
+.daraja{
+    margin: 4px;
+    border: none;
+    border-radius: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: auto;
+}
+
+
+.card2{
+    /* outline: solid 2px rgb(200, 57, 6); */
+    gap: var(2rem);
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    padding: auto;
+    width: auto;
+    max-width: max-content;
+    font-size: var(---Normal-paragraph);    
+    color: var(---tp-caret);
+    line-height: 1.6;
+    
+    /* position: relative; */
+    margin-right: 2rem;    
+}
+
+
+ h2{
+    text-align: center;
+    color: rgb(15, 179, 56);
+    margin-bottom: 20px;
+}
+.clicked{
+    display: none;
+}
+.cards{
+    /* outline: solid 2px rgb(6, 200, 57); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* height: 80rem; */
+    max-height: max-content;
+    font-size: var(---Normal-paragraph);
+    margin-top: 1rem;
+    padding: 2rem;
+    color: var(---tp-text);  
+    gap: var(2rem);
+} 
+.card3{
+    /* outline: solid 2px rgb(6, 57, 200); */
+    gap: var(2rem);
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    padding: auto;
+    width: auto;
+    max-width: max-content;
+    font-size: var(---h5);
+    color: var(---tp-caret);
+    
+    /* position: relative; */
+    margin-right: 2rem;
+}
+
+    /* -----------------------------------LOGIN/REGISTER----------------------------------------------- */
+    
+.login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(---bg-color);
+    backdrop-filter: blur(1px);
+    background: rgba(0,0,0,0.3);
+    color: #333; 
+}
+
+.container{
+    margin: 0 15px;
+
+}
+
+.form-box{
+    width: 100%;
+    max-width: clamp(200px, 300px, 450px);
+    padding: 30px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 12px;
+    background: #eee;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+/*  for displaying reg /login form */
+.active{
+    display: block;
+}
+
+.btn{
+    width: 100%;
+    padding: 12px;
+    background-color: #7494ec;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.btn:hover{
+    background-color: #6884d3;
+}
+.reg-p{
+    font-size: 14.5px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+a{
+    text-decoration: none;
+}
+p>a:hover{
+    background-color: #7494ec;
+    margin: auto;
+    padding: .5em;
+    border-radius: 4px;
+    text-decoration: underline;
+}
+/* footer */
+footer{
+    text-align: center;
+    padding: 1rem;
+    /* background-color: gray; */
+    color: var(---font-color);
+    position: relative;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: var(---Typewriter);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root{
+    ---bg:  hsl( 49 37% 94%);
+    
+
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.flex{
+    display: flex;
+    /* gap: var(--gap,1rem); */
+
+/* } */
+/*---------------------------primary-header-------------------------------- */
+/* .logo{
+    margin: 0.5rem 1rem;
+    z-index: 10000;
+}
+.primary-header{
+    align-items: center;
+    justify-content: space-between; 
+
+} */
+
+/* .primary-navigation{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    margin: 0; */
+    /* background-color: aquamarine; */
+/* }
+.primary-navigation a {
+    text-decoration: none;
+}
+.btn{
+padding-inline: calc(1rem + .75rem);
+}
+
+@media (max-width: 48em) {
+    .primary-navigation{
+        position: absolute;
+        inset: 0% 0% 0% 30%;
+
+        flex-direction: column;
+        right: 0;
+        margin: 0;
+    }
+}
+    */
+    
+
+
+/* ----------------------------- ------------------------------- */
+/* ----------------------------- ------------------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */

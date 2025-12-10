@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+
+    <title>Login</title>
+</head>
+<body>
+
+ <!-- navbar -->
+   <header class=" primary-navigation flex">
+    <div>
+        <a href="index.html" class="home">
+        <img src="assests/dg logo hom.jpg" alt="logo"  width="50em" class="logo">
+        </a>
+    </div>
+   <nav class="primary-navigation">
+    <ul class="primary-navigation">
+        <li>
+            <a href="index.html" class="btn1">HOME</a>
+        </li> 
+        <li>
+            <a href="login.html" class="btn1">LOGIN</a>
+        </li> 
+    </ul>
+    </nav> 
+   </header>
+
+    <!-----------------------------------LOGIN/REGISTER-99---------------------------------------------->
+    <section class="login reg">
+    <div class="container">
+
+        <div class="form-box active" id="login-form">
+            <form action="">
+                <h2>LOGIN</h2>
+
+                <label for="EMAIL:">EMAIL:
+                <input type="email" name="email" placeholder="EMAIL:" id="email" required>
+                </label>
+
+                <label for="PASSWORD:">PASSWORD:
+                <input type="password" name="password" placeholder="PASSWORD:"  required>
+                </label>
+
+                <select name="role" required>
+                    <option value="">Login As</option>
+                    <option value="Tenant">Tenant</option>
+                    <option value="Admin">Admin</option>
+                </select>
+
+                <button type="submit" name="Login" class="btn">Login</button>
+
+            
+
+                <p class="reg-p">Don't have an account? <a href="#" onclick="showform('register-form')">Register</a></p>
+            </form>
+        </div>
+
+        <div class="form-box" id="register-form">
+            <form action="">
+                <h2>REGISTER</h2>
+
+                <input type="name" name="name" placeholder="FULL NAME:" id="name" required>
+                <input type="email" name="email" placeholder="EMAIL:" id="email" required>
+                <input type="password" name="password" placeholder="PASSWORD:"  required>
+
+                <select name="role" required>
+                    <option value="">Register As</option>
+                    <option value="Tenant">Tenant</option>
+                    <option value="Admin">Admin</option>
+                </select>
+
+                <button type="submit" name="Register" class="btn">Register</button>
+
+                <p class="reg-p">
+                    Already have an account? 
+                    <a href="#" >onclick="showform('login-form')">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    </section>
+   
+
+
+
+</body>
+</html>*
